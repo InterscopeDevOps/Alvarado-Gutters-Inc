@@ -1,0 +1,15 @@
+.tableColorContent{
+    width: 100%;
+}
+
+.tableColorContent tr td{
+    border: 1px solid black;
+    margin-right: 20px;
+    text-transform: capitalize;
+}
+
+.tableColorContent tr th{
+    background-color: rgb(230, 230, 230);
+    border: 1px solid black;
+    text-transform: uppercase;
+}

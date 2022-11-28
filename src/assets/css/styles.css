@@ -1,0 +1,295 @@
+* {
+  user-select: none;
+}
+
+*::selection {
+  background: none;
+}
+
+*::-moz-selection {
+  background: none;
+}
+
+
+
+h1 {
+  font-size: calc(3em + 1vw);
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: calc(2em + 1vw);
+  text-transform: capitalize;
+  font-weight: bold;
+  color: var(--main-color);
+  line-height: 1.2;
+
+}
+
+h3 {
+  font-size: calc(1.8em + 1vw);
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 30px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 25px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+p {
+  line-height: 35px;
+}
+
+.gallery-content {
+  columns: 5 320px;
+}
+
+.gallery-item {
+  columns: 5 320px;
+}
+
+.gallery-content img {
+  margin: 10px;
+}
+
+.pswp__img {
+  object-fit: cover !important;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: calc(2em + 1vw);
+  }
+
+  h4 {
+    font-size: calc(1em + 1vw);
+  }
+
+}
+
+.content-directorios {
+  align-self: center;
+}
+
+.bgblockAboutbgImage {
+  position: relative;
+}
+
+.bgblockAboutbgImage::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: -50px;
+  background-image: url('../image/casaplano.png');
+  background-size: 55%;
+  background-position: top left;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+@media screen and (max-width:578px) {
+  .bgblockAboutbgImage::before {
+    top: -5px;
+    left: 0px;
+  }
+}
+
+/*estilo del contador de info */
+.bgCountent,
+.bgFormHome {
+  position: relative;
+  padding: 150px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/*bg de contenedor de video*/
+.bgCountentVideo {
+  position: relative;
+  padding: 100px 0 0;
+  margin-bottom: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-bottom-left-radius: 100% 80%;
+  border-bottom-right-radius: 100% 80%;
+}
+
+.bgCountentVideo .info {
+  width: 60%;
+  margin: 0 auto -80px;
+}
+
+.bgCountentVideo .countentVideoInfo {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bgCountent::before,
+.bgFormHome::before,
+.bgCountentVideo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bgCountentVideo::before {
+  border-bottom-left-radius: 100% 80%;
+  border-bottom-right-radius: 100% 80%;
+  background-color: var(--overlay-video-content);
+}
+
+.bgCountent::before,
+.bgFormHome::before {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+@media screen and (max-width:569px) {
+  .bgCountentVideo {
+    margin-bottom: 100px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .bgCountentVideo::before{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .bgCountentVideo .info {
+    width: 90%;
+    margin: 0 auto -30px;
+  }
+}
+
+
+/* Menu  */
+
+ul li .menuContent__subMenu {
+  display: none;
+  background: #fff;
+  position: absolute;
+  width: 240px;
+  z-index: 1000;
+  text-align: start;
+  overflow-y: auto;
+
+}
+
+ul li:hover .menuContent__subMenu {
+  display: block;
+}
+
+.menuContent__subMenu li {
+  display: block;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, .5);
+  color: #000;
+  padding: 10px 20px;
+}
+
+.menuContent__items {
+  margin-left: 30px;
+  color: #000;
+  transition: all ease-in-out .3s;
+}
+
+.menuContent__items:hover {
+  color: #fff;
+
+}
+
+a.active li {
+  color: #fff;
+}
+
+.menuContent__subMenu a.active li {
+  color: var(--btn);
+} 
+
+@media screen and (max-width: 770px) {
+  .menuContent__items:hover {
+    color: var(--btn);
+
+  }
+
+  a.active li {
+    color: var(--btn);
+  }
+}
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+.menuContent__subMenuMobil::-webkit-scrollbar,
+.menuContent__subMenu::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.menuContent__subMenuMobil::-webkit-scrollbar:vertical,
+.menuContent__subMenu::-webkit-scrollbar:vertical {
+  width: 5px;
+}
+
+.menuContent__subMenuMobil::-webkit-scrollbar-button:increment,
+.menuContent__subMenuMobil::-webkit-scrollbar-button,
+.menuContent__subMenu::-webkit-scrollbar-button:increment,
+.menuContent__subMenu::-webkit-scrollbar-button {
+  display: none;
+}
+
+.menuContent__subMenuMobil::-webkit-scrollbar:horizontal,
+.menuContent__subMenu::-webkit-scrollbar:horizontal {
+  height: 5px;
+}
+
+.menuContent__subMenuMobil::-webkit-scrollbar-thumb,
+.menuContent__subMenu::-webkit-scrollbar-thumb {
+  background-color: #1d1d1d;
+  border-radius: 20px;
+  border: 1px solid #1d1d1d;
+}
+
+.menuContent__subMenuMobil::-webkit-scrollbar-track,
+.menuContent__subMenu::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/*mobil menu*/
+
+.mobilMenuHeader{
+  position: absolute;
+  width: 100%;
+  right: 11px;
+  top: 10px;
+  background: white;
+  text-align: start;
+  padding: 20px;
+  border-radius:  0 0 20px 20px;
+}
+
+.menuContent__subItems{
+padding-bottom: 20px;
+}
+
+.menuContent__subMenuMobil{
+overflow-y: auto;
+height: 200px;
+}

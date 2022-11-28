@@ -1,0 +1,175 @@
+.floating-button-widgets{
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: var(--three-color);
+  position: fixed;
+  z-index: 999;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+}
+@media only screen and (max-width: 700px) {
+  .floating-button-widgets {
+    bottom: 90px;
+  }
+}
+.principal-btn{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  line-height: 40px;
+  font-size: 32px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  animation: plus-out 0.3s;
+  transition: all 0.3s;
+  color: white !important;
+}
+.container-floating-widget:hover .plus{
+  animation: plus-in 0.15s linear;
+  animation-fill-mode: forwards;
+}
+.edit{
+  position: absolute;
+  top: 0;
+  display: block;
+  bottom: 0;
+  left: 0;
+  display: block;
+  right: 0;
+  padding: 0;
+  opacity: 0;
+  margin: auto;
+  line-height: 65px;
+  font-size: 32px;
+  transform: rotateZ(-70deg);
+  transition: all 0.3s;
+  animation: edit-out 0.3s;
+}
+.container-floating-widget:hover .principal-btn{
+  animation: edit-in 0.2s;
+   animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+}
+@keyframes edit-in{
+    from {opacity: 0; transform: rotateZ(-70deg);}
+    to {opacity: 1; transform: rotateZ(0deg);}
+}
+@keyframes edit-out{
+    from {opacity: 1; transform: rotateZ(0deg);}
+    to {opacity: 0; transform: rotateZ(-70deg);}
+}
+@keyframes plus-in{
+    from {opacity: 1; transform: rotateZ(0deg);}
+    to {opacity: 0; transform: rotateZ(180deg);}
+}
+@keyframes plus-out{
+    from {opacity: 0; transform: rotateZ(180deg);}
+    to {opacity: 1; transform: rotateZ(0deg);}
+}
+.nds{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-self: center;
+  z-index: 300;
+  cursor: pointer;
+}
+.nd1{
+  background: #2BD34B;
+  animation-delay: 0.2s;
+  animation: bounce-out-nds 0.3s linear;
+}
+.nd2{
+  background: #F24130;
+  animation-delay: 0.15s;
+    animation: bounce-out-nds 0.15s linear;
+}
+.nd3{
+  background: #00AAE8;
+  animation-delay: 0.1s;
+    animation: bounce-out-nds 0.1s linear;
+}
+.nd4{
+  background: #F29D35;
+  animation-delay: 0.1s;
+  animation: bounce-out-nds 0.1s linear;
+}
+@keyframes bounce-nds{
+    from {opacity: 0;}
+    to {opacity: 1; transform: scale(1);}
+}
+@keyframes bounce-out-nds{
+    from {opacity: 1; transform: scale(1);}
+    to {opacity: 0; transform: scale(0);}
+}
+.letter{
+  font-size: 23px;
+  font-family: 'Roboto';
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  line-height: 40px;
+}
+.item-widget{
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  line-height: 40px;
+}
+.profile{
+  border-radius: 50%;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 20px;
+}
+/*Loader Typing */
+.loaderTyping {
+text-align: center;
+position: relative;
+display: flex;
+width: 25%;
+padding: 10px;
+border-radius: 20px;
+}
+.loaderTyping span {
+display: inline-block;
+vertical-align: middle;
+width: 13px;
+height: 13px;
+background: rgb(0, 136, 189);
+border-radius: 15px;
+animation: loader 0.8s infinite alternate;
+}
+.loaderTyping span:nth-of-type(2) {
+animation-delay: 0.2s;
+}
+.loaderTyping span:nth-of-type(3) {
+animation-delay: 0.6s;
+}
+@keyframes loader {
+0% {
+opacity: 0.9;
+transform: scale(0.5);
+}
+100% {
+opacity: 0.1;
+transform: scale(1);
+}
+}
